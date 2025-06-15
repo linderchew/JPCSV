@@ -1,1 +1,587 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JP Consulting Services Pte Ltd</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FFD700',secondary:'#000000'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+body {
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+font-weight: 700;
+line-height: 1.3;
+}
+.logo-text {
+font-family: 'Playfair Display', serif;
+font-weight: 700;
+letter-spacing: 0.05em;
+}
+p {
+font-weight: 400;
+}
+.font-medium {
+font-weight: 500;
+}
+.font-semibold {
+font-weight: 600;
+}
+.hero {
+background-image: url('https://readdy.ai/api/search-image?query=professional%20modern%20corporate%20office%20interior%20with%20elegant%20furniture%20and%20glass%20windows%2C%20golden%20accents%2C%20business%20meeting%20room%20with%20city%20skyline%20view%2C%20soft%20lighting%2C%20minimalist%20design%2C%20high-end%20financial%20district%20atmosphere%2C%20cream%20and%20gold%20color%20scheme&width=1600&height=800&seq=123456&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.hero-overlay {
+background: linear-gradient(90deg, rgba(255,250,240,0.95) 0%, rgba(255,250,240,0.95) 50%, rgba(255,250,240,0.7) 70%, rgba(255,250,240,0) 100%);
+}
+.service-card:hover {
+box-shadow: 0 10px 15px -3px rgba(255, 215, 0, 0.1), 0 4px 6px -2px rgba(255, 215, 0, 0.05);
+border-color: #FFD700;
+}
+.team-card:hover {
+border-color: #FFD700;
+}
+input:focus, textarea:focus {
+border-color: #FFD700;
+box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+</style>
+</head>
+<body class="bg-[#FFFAF0]">
+<!-- Header -->
+<header class="bg-white shadow-sm">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<img src="https://static.readdy.ai/image/5caf2abe1c5470de59d0fd181df2ca24/6774209fa854bac80183adc85b09475f.png" alt="JP Consulting Logo" class="h-12">
+</div>
+<nav class="hidden md:flex space-x-8">
+<a href="#" class="text-secondary hover:text-primary font-medium transition duration-300">Home</a>
+<a href="#services" class="text-secondary hover:text-primary font-medium transition duration-300">Services</a>
+<a href="#about" class="text-secondary hover:text-primary font-medium transition duration-300">About Us</a>
+<a href="#team" class="text-secondary hover:text-primary font-medium transition duration-300">Our Team</a>
+<a href="#contact" class="text-secondary hover:text-primary font-medium transition duration-300">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="bg-primary text-secondary px-5 py-2 font-medium !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Get Consultation</button>
+<div class="w-10 h-10 flex items-center justify-center md:hidden">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero w-full relative">
+<div class="hero-overlay w-full h-full absolute inset-0"></div>
+<div class="container mx-auto px-6 py-24 relative z-10">
+<div class="w-full md:w-1/2 lg:w-5/12">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight mb-6">
+Tailored Financial Solutions for Your Business
+</h1>
+<div class="w-20 h-1 bg-primary mb-6"></div>
+<p class="text-gray-800 text-lg mb-8">
+Expert financial advisory, accounting, and corporate secretarial services to help your business thrive in today's competitive market.
+</p>
+<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+<button class="bg-primary text-secondary px-6 py-3 font-medium !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Schedule a Consultation</button>
+<button class="border-2 border-primary text-secondary px-6 py-3 font-medium !rounded-button hover:bg-primary hover:bg-opacity-10 transition duration-300 whitespace-nowrap">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="bg-white py-20">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Comprehensive Services</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-700 max-w-3xl mx-auto">
+We provide a complete range of financial and corporate services to help businesses navigate complex financial landscapes and achieve sustainable growth.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="service-card bg-white p-8 rounded border border-gray-200 transition duration-300 hover:transform hover:scale-105">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-funds-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-4">Financial Advisory</h3>
+<p class="text-gray-700 mb-6">
+Strategic financial planning, investment analysis, and risk management tailored to your business objectives and market conditions.
+</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Learn More
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="service-card bg-white p-8 rounded border border-gray-200 transition duration-300 hover:transform hover:scale-105">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-file-chart-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-4">Accounting Services</h3>
+<p class="text-gray-700 mb-6">
+Comprehensive accounting solutions including bookkeeping, financial reporting, tax planning, and compliance with local regulations.
+</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Learn More
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="service-card bg-white p-8 rounded border border-gray-200 transition duration-300 hover:transform hover:scale-105">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-building-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-4">Corporate Secretarial</h3>
+<p class="text-gray-700 mb-6">
+Expert assistance with company formation, regulatory compliance, corporate governance, and statutory filing requirements.
+</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Learn More
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Service 4 -->
+<div class="service-card bg-white p-8 rounded border border-gray-200 transition duration-300 hover:transform hover:scale-105">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-exchange-funds-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-4">Deal Negotiation</h3>
+<p class="text-gray-700 mb-6">
+Strategic negotiation support for mergers, acquisitions, and partnerships, ensuring favorable terms and maximizing value.
+</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Learn More
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Service 5 -->
+<div class="service-card bg-white p-8 rounded border border-gray-200 transition duration-300 hover:transform hover:scale-105">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-recycle-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-4">Asset Restructuring</h3>
+<p class="text-gray-700 mb-6">
+Specialized expertise in acquiring and restructuring distressed assets, implementing turnaround strategies, and creating value.
+</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Learn More
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Service 6 -->
+<div class="service-card bg-white p-8 rounded border border-gray-200 transition duration-300 hover:transform hover:scale-105">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-line-chart-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-4">Exit Strategy Planning</h3>
+<p class="text-gray-700 mb-6">
+Strategic guidance for business exits through RTO, IPO, or strategic sale, with expertise in SGX rules and regulatory requirements.
+</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Learn More
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="bg-[#F5F5F5] py-20">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Why Choose JP Consulting Services</h2>
+<div class="w-20 h-1 bg-primary mb-6"></div>
+<p class="text-gray-700 mb-8">
+With decades of combined experience in financial services and corporate advisory, our team delivers tailored solutions that drive business growth and create lasting value for our clients.
+</p>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-award-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-secondary mb-2">Industry Expertise</h3>
+<p class="text-gray-700">
+Our team brings specialized knowledge across various industries, ensuring solutions that address your specific sector challenges.
+</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-customer-service-2-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-secondary mb-2">Client-Centric Approach</h3>
+<p class="text-gray-700">
+We prioritize understanding your business objectives to deliver personalized strategies that align with your vision.
+</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-global-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-secondary mb-2">Regulatory Knowledge</h3>
+<p class="text-gray-700">
+Extensive experience with SGX rules and regulatory frameworks ensures compliance and smooth execution of strategic initiatives.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-white p-6 rounded shadow-md text-center">
+<div class="text-primary text-4xl font-bold mb-2">15+</div>
+<p class="text-gray-700">Years of Experience</p>
+</div>
+<div class="bg-white p-6 rounded shadow-md text-center">
+<div class="text-primary text-4xl font-bold mb-2">200+</div>
+<p class="text-gray-700">Clients Served</p>
+</div>
+<div class="bg-white p-6 rounded shadow-md text-center">
+<div class="text-primary text-4xl font-bold mb-2">$500M+</div>
+<p class="text-gray-700">Assets Managed</p>
+</div>
+<div class="bg-white p-6 rounded shadow-md text-center">
+<div class="text-primary text-4xl font-bold mb-2">98%</div>
+<p class="text-gray-700">Client Retention</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section id="team" class="bg-white py-20">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Expert Team</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-700 max-w-3xl mx-auto">
+Our team of experienced professionals combines deep industry knowledge with strategic insight to deliver exceptional results for our clients.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Team Member 1 -->
+<div class="team-card bg-white rounded shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+<div class="h-64 bg-gray-100">
+<img src="https://readdy.ai/api/search-image?query=professional%20Asian%20male%20executive%20in%20business%20suit%20with%20confident%20expression%2C%20corporate%20headshot%20with%20neutral%20background%2C%20financial%20advisor%20portrait%2C%20high%20quality%20professional%20photo%2C%20business%20professional&width=600&height=600&seq=1001&orientation=portrait" alt="Jonathan Chen" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-secondary mb-1">Jonathan Chen</h3>
+<div class="w-12 h-0.5 bg-primary mb-3"></div>
+<p class="text-gray-600 text-sm mb-4">Managing Director</p>
+<p class="text-gray-700 text-sm mb-4">
+Over 20 years of experience in corporate finance and strategic advisory for multinational corporations.
+</p>
+<div class="flex items-center">
+<a href="#" class="w-8 h-8 flex items-center justify-center text-primary hover:text-secondary transition duration-300">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center text-primary hover:text-secondary transition duration-300">
+<i class="ri-mail-line ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="team-card bg-white rounded shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+<div class="h-64 bg-gray-100">
+<img src="https://readdy.ai/api/search-image?query=professional%20Asian%20female%20executive%20in%20business%20attire%20with%20confident%20expression%2C%20corporate%20headshot%20with%20neutral%20background%2C%20financial%20advisor%20portrait%2C%20high%20quality%20professional%20photo%2C%20business%20professional&width=600&height=600&seq=1002&orientation=portrait" alt="Michelle Tan" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-secondary mb-1">Michelle Tan</h3>
+<div class="w-12 h-0.5 bg-primary mb-3"></div>
+<p class="text-gray-600 text-sm mb-4">Financial Advisory Director</p>
+<p class="text-gray-700 text-sm mb-4">
+Specializes in M&A transactions and corporate restructuring with expertise in SGX regulations.
+</p>
+<div class="flex items-center">
+<a href="#" class="w-8 h-8 flex items-center justify-center text-primary hover:text-secondary transition duration-300">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center text-primary hover:text-secondary transition duration-300">
+<i class="ri-mail-line ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="team-card bg-white rounded shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+<div class="h-64 bg-gray-100">
+<img src="https://readdy.ai/api/search-image?query=professional%20Indian%20male%20executive%20in%20business%20suit%20with%20confident%20expression%2C%20corporate%20headshot%20with%20neutral%20background%2C%20financial%20advisor%20portrait%2C%20high%20quality%20professional%20photo%2C%20business%20professional&width=600&height=600&seq=1003&orientation=portrait" alt="Rajiv Mehta" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-secondary mb-1">Rajiv Mehta</h3>
+<div class="w-12 h-0.5 bg-primary mb-3"></div>
+<p class="text-gray-600 text-sm mb-4">Head of Accounting</p>
+<p class="text-gray-700 text-sm mb-4">
+Certified accountant with extensive experience in financial reporting and tax optimization strategies.
+</p>
+<div class="flex items-center">
+<a href="#" class="w-8 h-8 flex items-center justify-center text-primary hover:text-secondary transition duration-300">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center text-primary hover:text-secondary transition duration-300">
+<i class="ri-mail-line ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Team Member 4 -->
+<div class="team-card bg-white rounded shadow-sm border border-gray-100 overflow-hidden transition duration-300">
+<div class="h-64 bg-gray-100">
+<img src="https://readdy.ai/api/search-image?query=professional%20Chinese%20female%20executive%20in%20business%20attire%20with%20confident%20expression%2C%20corporate%20headshot%20with%20neutral%20background%2C%20financial%20advisor%20portrait%2C%20high%20quality%20professional%20photo%2C%20business%20professional&width=600&height=600&seq=1004&orientation=portrait" alt="Sarah Wong" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-secondary mb-1">Sarah Wong</h3>
+<div class="w-12 h-0.5 bg-primary mb-3"></div>
+<p class="text-gray-600 text-sm mb-4">Corporate Secretarial Lead</p>
+<p class="text-gray-700 text-sm mb-4">
+Expert in corporate governance and regulatory compliance with over 15 years of experience.
+</p>
+<div class="flex items-center">
+<a href="#" class="w-8 h-8 flex items-center justify-center text-primary hover:text-secondary transition duration-300">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center text-primary hover:text-secondary transition duration-300">
+<i class="ri-mail-line ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-[#F5F5F5]">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Contact Us</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-700 max-w-3xl mx-auto">
+Get in touch with our team to discuss how we can help your business achieve its financial goals and strategic objectives.
+</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="bg-white rounded shadow-md p-8">
+<h3 class="text-2xl font-bold text-secondary mb-6">Send Us a Message</h3>
+<form>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="name" class="block text-gray-700 mb-2">Full Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" placeholder="Your name">
+</div>
+<div>
+<label for="email" class="block text-gray-700 mb-2">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" placeholder="Your email">
+</div>
+</div>
+<div class="mb-6">
+<label for="company" class="block text-gray-700 mb-2">Company Name</label>
+<input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" placeholder="Your company">
+</div>
+<div class="mb-6">
+<label for="service" class="block text-gray-700 mb-2">Service of Interest</label>
+<div class="relative">
+<select id="service" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none appearance-none pr-8">
+<option value="" selected disabled>Select a service</option>
+<option value="financial-advisory">Financial Advisory</option>
+<option value="accounting">Accounting Services</option>
+<option value="corporate-secretarial">Corporate Secretarial</option>
+<option value="deal-negotiation">Deal Negotiation</option>
+<option value="asset-restructuring">Asset Restructuring</option>
+<option value="exit-strategy">Exit Strategy Planning</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<i class="ri-arrow-down-s-line ri-lg text-gray-500"></i>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<label for="message" class="block text-gray-700 mb-2">Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none" placeholder="Tell us about your needs"></textarea>
+</div>
+<button type="submit" class="bg-primary text-secondary px-6 py-3 font-medium !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<div class="bg-[#FFD700] rounded shadow-md p-8 text-secondary">
+<h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-map-pin-line ri-lg text-secondary"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Our Office</h4>
+<p>One Raffles Place, #20-61<br>Singapore 048616</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-phone-line ri-lg text-secondary"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Phone</h4>
+<p>+65 6123 4567</p>
+<p>+65 9876 5432</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-mail-line ri-lg text-secondary"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Email</h4>
+<p>info@jpconsulting.sg</p>
+<p>enquiry@jpconsulting.sg</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+<i class="ri-time-line ri-lg text-secondary"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Business Hours</h4>
+<p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+<p>Saturday: By appointment only</p>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<h4 class="text-lg font-bold mb-4">Connect With Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full hover:bg-opacity-20 transition duration-300">
+<i class="ri-linkedin-fill ri-lg text-secondary"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full hover:bg-opacity-20 transition duration-300">
+<i class="ri-facebook-fill ri-lg text-secondary"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full hover:bg-opacity-20 transition duration-300">
+<i class="ri-twitter-x-fill ri-lg text-secondary"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-16">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<div class="flex items-center mb-6">
+<img src="https://static.readdy.ai/image/5caf2abe1c5470de59d0fd181df2ca24/6774209fa854bac80183adc85b09475f.png" alt="JP Consulting Logo" class="h-12 brightness-0 invert">
+</div>
+<p class="text-gray-400 mb-6">
+Your trusted partner for comprehensive financial advisory and corporate services in Singapore.
+</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-primary hover:text-secondary transition duration-300">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-primary hover:text-secondary transition duration-300">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-primary hover:text-secondary transition duration-300">
+<i class="ri-twitter-x-fill ri-lg"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Our Services</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Financial Advisory</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Accounting Services</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Corporate Secretarial</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Deal Negotiation</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Asset Restructuring</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Exit Strategy Planning</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Our Team</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Careers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Terms of Service</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition duration-300">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Newsletter</h4>
+<p class="text-gray-400 mb-4">
+Subscribe to our newsletter for the latest insights and industry updates.
+</p>
+<form class="mb-6">
+<div class="flex">
+<input type="email" placeholder="Your email address" class="px-4 py-3 w-full border-none text-secondary rounded-l focus:outline-none">
+<button type="submit" class="bg-primary text-secondary px-4 py-3 rounded-r hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Subscribe</button>
+</div>
+</form>
+<div>
+<h4 class="text-lg font-bold mb-4">We Accept</h4>
+<div class="flex space-x-4">
+<i class="ri-visa-fill ri-xl text-gray-400"></i>
+<i class="ri-mastercard-fill ri-xl text-gray-400"></i>
+<i class="ri-paypal-fill ri-xl text-gray-400"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">
+&copy; 2025 JP Consulting Services Pte Ltd. All rights reserved.
+</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition duration-300">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition duration-300">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition duration-300">Sitemap</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const menuButton = document.querySelector('.ri-menu-line');
+const nav = document.querySelector('nav');
+if (menuButton && nav) {
+menuButton.addEventListener('click', function() {
+nav.classList.toggle('hidden');
+nav.classList.toggle('flex');
+nav.classList.toggle('flex-col');
+nav.classList.toggle('absolute');
+nav.classList.toggle('top-16');
+nav.classList.toggle('right-6');
+nav.classList.toggle('bg-white');
+nav.classList.toggle('p-4');
+nav.classList.toggle('rounded');
+nav.classList.toggle('shadow-lg');
+nav.classList.toggle('z-50');
+});
+}
+});
+</script>
+</body>
+</html>
