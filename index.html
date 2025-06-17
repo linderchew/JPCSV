@@ -439,8 +439,21 @@ UEN: 201116660G
     mobileServicesToggle.addEventListener('click', () => {
       mobileServicesList.classList.toggle('hidden');
     });
+
+    // Add this block to close menu when clicking any mobile menu link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        // Optionally, also hide the services list if open
+        if (!mobileServicesList.classList.contains('hidden')) {
+          mobileServicesList.classList.add('hidden');
+        }
+      });
+    });
   });
 </script>
+
 <style>
 html {
   scroll-padding-top: 144px; /* Match this with your header height */
