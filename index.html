@@ -66,46 +66,70 @@ box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
         <img src="https://static.readdy.ai/image/5caf2abe1c5470de59d0fd181df2ca24/6774209fa854bac80183adc85b09475f.png" alt="JP Consulting Logo" class="h-20">
       </div>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center space-x-8">
-        <a href="#" class="text-secondary hover:text-primary font-medium transition duration-300">Home</a>
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex space-x-6 items-center">
+      <a href="#about" class="text-secondary hover:text-primary transition">About</a>
 
-        <!-- Services Dropdown -->
-        <div class="relative group">
-          <a href="#services" class="text-secondary hover:text-primary font-medium transition duration-300 flex items-center space-x-1">
-            <span>Services</span>
-            <i class="ri-arrow-down-s-line text-sm"></i>
-          </a>
-          <!-- Dropdown Content -->
-          <div class="absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded mt-2 min-w-[220px] py-2 z-50">
-            <section id="financial-advisory"><a href="#financial-advisory" class="px-4 py-2 hover:bg-gray-100 text-secondary">Financial Advisory</a></section>
-            <a href="#cfo-services" class="px-4 py-2 hover:bg-gray-100 text-secondary">CFO Services</a>
-            <a href="#asset-restructuring" class="px-4 py-2 hover:bg-gray-100 text-secondary">Asset Restructuring</a>
-            <a href="#exit-strategy" class="px-4 py-2 hover:bg-gray-100 text-secondary">Exit Strategy Planning</a>
-            <a href="#internal-controls" class="px-4 py-2 hover:bg-gray-100 text-secondary">Internal Controls & Sustainability</a>
-            <a href="#accounting" class="px-4 py-2 hover:bg-gray-100 text-secondary">Accounting Services</a>
-            <a href="#corporate-secretarial" class="px-4 py-2 hover:bg-gray-100 text-secondary">Corporate Secretarial</a>
-            <a href="#bpa" class="px-4 py-2 hover:bg-gray-100 text-secondary">Business Process Automation</a>
-          </div>
-        </div>
-
-        <a href="#about" class="text-secondary hover:text-primary font-medium transition duration-300">About Us</a>
-        <a href="#contact" class="text-secondary hover:text-primary font-medium transition duration-300">Contact</a>
-      </nav>
-
-      <!-- CTA + Mobile Menu Icon -->
-      <div class="flex items-center space-x-4">
-        <a href="#contact">
-          <button class="bg-primary text-secondary px-5 py-2 font-medium !rounded-button hover:bg-opacity-90 transition duration-300 whitespace-nowrap">
-            Get Consultation
-          </button>
-        </a>
-        <!-- Mobile Menu Icon -->
-        <div class="w-10 h-10 flex items-center justify-center md:hidden cursor-pointer">
-          <i class="ri-menu-line ri-lg"></i>
-        </div>
+      <!-- Services Dropdown -->
+      <div class="relative group">
+        <button class="text-secondary hover:text-primary transition flex items-center gap-1">
+          Services
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <ul class="absolute hidden group-hover:block bg-white shadow-lg rounded mt-2 py-2 w-60 z-50">
+          <li><a href="#financial-advisory" class="block px-4 py-2 hover:bg-gray-100">Financial Advisory</a></li>
+          <li><a href="#cfo-services" class="block px-4 py-2 hover:bg-gray-100">CFO Services</a></li>
+          <li><a href="#asset-restructuring" class="block px-4 py-2 hover:bg-gray-100">Asset Restructuring</a></li>
+          <li><a href="#exit-strategy" class="block px-4 py-2 hover:bg-gray-100">Exit Strategy Planning</a></li>
+          <li><a href="#internal-controls" class="block px-4 py-2 hover:bg-gray-100">Internal Controls & Sustainability</a></li>
+          <li><a href="#accounting" class="block px-4 py-2 hover:bg-gray-100">Accounting Services</a></li>
+          <li><a href="#corporate-secretarial" class="block px-4 py-2 hover:bg-gray-100">Corporate Secretarial</a></li>
+          <li><a href="#automation" class="block px-4 py-2 hover:bg-gray-100">Business Process Automation</a></li>
+        </ul>
       </div>
+
+      <a href="#contact" class="text-secondary hover:text-primary transition">Contact</a>
+
+      <!-- CTA Button -->
+      <a href="#contact" class="ml-4 bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">
+        Get Consultation
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="menu-toggle" class="text-2xl lg:hidden">
+      <i class="ri-menu-line"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4">
+    <a href="#about" class="block py-2 text-secondary">About</a>
+
+    <!-- Services Dropdown (Accordion-style) -->
+    <div>
+      <button id="mobile-services-toggle" class="w-full text-left py-2 text-secondary flex justify-between items-center">
+        Services
+        <i class="ri-arrow-down-s-line"></i>
+      </button>
+      <ul id="mobile-services-list" class="hidden pl-4 text-sm">
+        <li><a href="#financial-advisory" class="block py-1 text-secondary">Financial Advisory</a></li>
+        <li><a href="#cfo-services" class="block py-1 text-secondary">CFO Services</a></li>
+        <li><a href="#asset-restructuring" class="block py-1 text-secondary">Asset Restructuring</a></li>
+        <li><a href="#exit-strategy" class="block py-1 text-secondary">Exit Strategy Planning</a></li>
+        <li><a href="#internal-controls" class="block py-1 text-secondary">Internal Controls & Sustainability</a></li>
+        <li><a href="#accounting" class="block py-1 text-secondary">Accounting Services</a></li>
+        <li><a href="#corporate-secretarial" class="block py-1 text-secondary">Corporate Secretarial</a></li>
+        <li><a href="#automation" class="block py-1 text-secondary">Business Process Automation</a></li>
+      </ul>
     </div>
+
+    <a href="#contact" class="block py-2 text-secondary">Contact</a>
+
+    <!-- CTA Button -->
+    <a href="#contact" class="block mt-3 text-center bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">
+      Get Consultation
+    </a>
   </div>
 </header>
 <!-- Hero Section -->
