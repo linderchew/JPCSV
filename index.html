@@ -423,25 +423,20 @@ Get in touch with our team to discuss how we can help your business achieve its 
 </div>
 </footer>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Mobile menu toggle
-  const menuButton = document.querySelector('.ri-menu-line');
-  const mobileNav = document.querySelector('.mobile-nav');
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+    const mobileServicesList = document.getElementById('mobile-services-list');
 
-  if (menuButton && mobileNav) {
-    menuButton.addEventListener('click', function () {
-      mobileNav.classList.toggle('hidden');
-      mobileNav.classList.toggle('absolute');
-      mobileNav.classList.toggle('top-full');
-      mobileNav.classList.toggle('right-6');
-      mobileNav.classList.toggle('bg-white');
-      mobileNav.classList.toggle('p-4');
-      mobileNav.classList.toggle('rounded');
-      mobileNav.classList.toggle('shadow-lg');
-      mobileNav.classList.toggle('z-50');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
-  }
-});
+
+    mobileServicesToggle.addEventListener('click', () => {
+      mobileServicesList.classList.toggle('hidden');
+    });
+  });
 </script>
 </body>
 </html>
